@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LiverpoolExamen</string>
+    <string name="find_product">Buscar producto</string>
+    <string name="page">Pagina</string>
+    <string name="items_por_pagina">Items por pagina</string>
+    <string name="producto">Producto</string>
+    <string name="find_button">Buscar</string>
+</resources>
