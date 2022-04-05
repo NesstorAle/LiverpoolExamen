@@ -39,7 +39,7 @@ class ItemAdapter(var itemsToDisplay: List<ItemToDisplay>): RecyclerView.Adapter
     }
 
     fun setList(items: MutableList<ItemToDisplay>){
-        this.itemsToDisplay = items;
-        notifyDataSetChanged();
+        this.itemsToDisplay = items
+        notifyDataSetChanged()
     }
 }

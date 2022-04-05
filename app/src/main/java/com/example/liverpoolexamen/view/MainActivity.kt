@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         )
 
         binding.apply {
+            rvItems.layoutManager = LinearLayoutManager(this@MainActivity)
+            rvItems.adapter = adapter
             btnFind.setOnClickListener(this@MainActivity)
         }
     }
@@ -54,9 +56,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     viewModel.getItems(tietItem.text.toString())
                     viewModel.responseItem.observe( this@MainActivity){
+                        itemList.clear()
                         it.plpResults.records.forEach { item ->
                             itemList.add(ItemToDisplay(image = item.smImage, price = item.listPrice.toString(), title = item.productDisplayName))
-                            initRecycler(itemList)
+                            adapter.setList(itemList)
                         }
                     }
                 }
